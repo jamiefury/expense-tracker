@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Expense Tracker</h1>
+            <p>Take control of your finances</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Spent</h3>
+                    <span class="amount" id="totalSpent">$0.00</span>
+                </div>
+                <div class="stat-card">
+                    <h3>This Month</h3>
+                    <span class="amount" id="monthlySpent">$0.00</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Expenses</h3>
+                    <span class="count" id="expenseCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="add-expense-section">
+                <h2>Add New Expense</h2>
+                <form id="expenseForm" class="expense-form">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description" placeholder="What did you spend on?"
+                            required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" name="amount" placeholder="0.00" step="0.01" min="0"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select category</option>
+                                <option value="food">🍕 Food & Dining</option>
+                                <option value="transportation">🚗 Transportation</option>
+                                <option value="shopping">🛍️ Shopping</option>
+                                <option value="entertainment">🎬 Entertainment</option>
+                                <option value="bills">📄 Bills & Utilities</option>
+                                <option value="health">🏥 Health & Medical</option>
+                                <option value="education">📚 Education</option>
+                                <option value="travel">✈️ Travel</option>
+                                <option value="other">🔗 Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="expenses-section">
+                <div class="section-header">
+                    <h2>Recent Expenses</h2>
+                    <div class="controls">
+                        <select id="filterCategory" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="food">🍕 Food & Dining</option>
+                            <option value="transportation">🚗 Transportation</option>
+                            <option value="shopping">🛍️ Shopping</option>
+                            <option value="entertainment">🎬 Entertainment</option>
+                            <option value="bills">📄 Bills & Utilities</option>
+                            <option value="health">🏥 Health & Medical</option>
+                            <option value="education">📚 Education</option>
+                            <option value="travel">✈️ Travel</option>
+                            <option value="other">🔗 Other</option>
+                        </select>
+                        <button id="clearAll" class="btn-secondary">Clear All</button>
+                        <button id="exportData" class="btn-secondary">Export CSV</button>
+                    </div>
+                </div>
+
+                <div class="expenses-list" id="expensesList">
+                    <div class="no-expenses">
+                        <p>No expenses recorded yet. Add your first expense above!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
