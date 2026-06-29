@@ -7,6 +7,7 @@ A small client-side expense tracker. No build, no backend, no accounts: open `in
 - Add, edit, delete, and categorize expenses
 - Running total and monthly spending
 - Filter by category
+- Charts and analytics: category breakdown, spending trends, monthly view
 - CSV export
 - Mobile-friendly
 
