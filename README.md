@@ -1,34 +1,18 @@
 # Expense Tracker
 
-A simple web app to track your personal expenses. Just open `index.html` in your browser and start tracking
+A small client-side expense tracker. No build, no backend, no accounts: open `index.html` and go. Your data stays in your browser (localStorage).
 
 ## Features
 
-- Add/edit/delete expenses
-- Categorize expenses (food, transport, etc.)
-- See total and monthly spending
+- Add, edit, delete, and categorize expenses
+- Running total and monthly spending
 - Filter by category
-- Export to CSV
-- Works on mobile
+- CSV export
+- Mobile-friendly
 
 ## Usage
 
-1. Clone this repo
-2. Open `index.html` in your browser
-3. Start adding expenses
-
-No setup or installation needed.
-
-## Contributing
-
-Want to help improve this? Some ideas:
-- Add charts/graphs
-- Better search functionality
-- Dark mode
-- Expense budgets
-- Import from bank statements
-
-Just fork the repo and send a pull request.
+Open `index.html` in your browser. That's it.
 
 ## License
 
